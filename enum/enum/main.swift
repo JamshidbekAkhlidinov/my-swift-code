@@ -182,3 +182,79 @@ catch ErrorEnum.invalidValue{
 }catch ErrorEnum.invalideName{
     print("invalida name")
 }
+
+
+
+
+///Masala
+enum ErrorNumberEnum:Error {
+    case notNumber
+}
+
+func convertNumber(_ str:String) throws -> String {
+    guard let lastCharacter = str.last,
+          let lastDigit = Int(String(lastCharacter)) else {
+        throw ErrorNumberEnum.notNumber
+    }
+    
+    if lastDigit % 2 == 0 {
+        var modifiteString = str
+        modifiteString.removeLast()
+        modifiteString.append(String(lastDigit+1))
+        return modifiteString
+    }
+    
+    throw ErrorNumberEnum.notNumber
+}
+
+do {
+    print(try convertNumber("Salom1"))
+}
+
+catch ErrorNumberEnum.notNumber {
+    print("Raqamga aylantirib bo'lmadi")
+}catch {
+    print("Noma'lum xatolik")
+}
+
+
+
+//2-masala
+
+enum NumberError: Error {
+    case notInteger
+    case negativeNumber
+}
+
+func separateIntegers(_ values: [Any]) throws -> [Int] {
+    var integers: [Int] = []
+
+    for value in values {
+        // Agar qiymat Int emas bo'lsa yoki qiymatni Intga o'zgartirib bo'lmaydigan tilda kiritilsa
+        guard let intValue = value as? Int else {
+            throw NumberError.notInteger
+        }
+
+        // Agar son manfiy bo'lsa xato tashlash
+        guard intValue >= 0 else {
+            throw NumberError.negativeNumber
+        }
+
+        integers.append(intValue)
+    }
+
+    return integers
+}
+
+// Test qilish
+do {
+    let numbers = try separateIntegers([5, 23,34])
+    print("Sonlar: \(numbers)")
+} catch NumberError.notInteger {
+    print("Xatolik: Butun son kiritilmagan yoki kiritilgan qiymatni butun sona o'zgartirib bo'lmaydigan tilda kiritilgan")
+} catch NumberError.negativeNumber {
+    print("Xatolik: Manfiy son kiritilgan")
+} catch {
+    print("Noma'lum xatolik")
+}
+
