@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		52792B042B52420F0009AED5 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52792B032B52420F0009AED5 /* main.swift */; };
+		52792B0B2B5242260009AED5 /* Encoder & Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52792B0A2B5242260009AED5 /* Encoder & Decoder.swift */; };
+		52792B0D2B5251A30009AED5 /* Memory Managment .swift in Sources */ = {isa = PBXBuildFile; fileRef = 52792B0C2B5251A20009AED5 /* Memory Managment .swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		52792B002B52420F0009AED5 /* basic swift */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "basic swift"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52792B032B52420F0009AED5 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		52792B0A2B5242260009AED5 /* Encoder & Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encoder & Decoder.swift"; sourceTree = "<group>"; };
+		52792B0C2B5251A20009AED5 /* Memory Managment .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Memory Managment .swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +61,9 @@
 		52792B022B52420F0009AED5 /* basic swift */ = {
 			isa = PBXGroup;
 			children = (
+				52792B0C2B5251A20009AED5 /* Memory Managment .swift */,
 				52792B032B52420F0009AED5 /* main.swift */,
+				52792B0A2B5242260009AED5 /* Encoder & Decoder.swift */,
 			);
 			path = "basic swift";
 			sourceTree = "<group>";
@@ -120,6 +126,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52792B0B2B5242260009AED5 /* Encoder & Decoder.swift in Sources */,
+				52792B0D2B5251A30009AED5 /* Memory Managment .swift in Sources */,
 				52792B042B52420F0009AED5 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
