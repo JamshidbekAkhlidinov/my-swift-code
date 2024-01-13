@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		520C3F4C2B4FCB50003932DD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520C3F4B2B4FCB50003932DD /* main.swift */; };
 		523AE5DE2B50643600300F57 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523AE5DD2B50643600300F57 /* Enum.swift */; };
+		523AE5E02B50757900300F57 /* Protacol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523AE5DF2B50757900300F57 /* Protacol.swift */; };
+		528716FE2B50FBAC00D768F6 /* Generics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528716FD2B50FBAC00D768F6 /* Generics.swift */; };
+		528717002B51034C00D768F6 /* Encupsulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528716FF2B51034C00D768F6 /* Encupsulation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +30,9 @@
 		520C3F482B4FCB50003932DD /* enum */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = enum; sourceTree = BUILT_PRODUCTS_DIR; };
 		520C3F4B2B4FCB50003932DD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		523AE5DD2B50643600300F57 /* Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
+		523AE5DF2B50757900300F57 /* Protacol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protacol.swift; sourceTree = "<group>"; };
+		528716FD2B50FBAC00D768F6 /* Generics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generics.swift; sourceTree = "<group>"; };
+		528716FF2B51034C00D768F6 /* Encupsulation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encupsulation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,9 @@
 			isa = PBXGroup;
 			children = (
 				520C3F4B2B4FCB50003932DD /* main.swift */,
+				528716FF2B51034C00D768F6 /* Encupsulation.swift */,
+				523AE5DF2B50757900300F57 /* Protacol.swift */,
+				528716FD2B50FBAC00D768F6 /* Generics.swift */,
 				523AE5DD2B50643600300F57 /* Enum.swift */,
 			);
 			path = enum;
@@ -124,7 +133,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				523AE5DE2B50643600300F57 /* Enum.swift in Sources */,
+				528717002B51034C00D768F6 /* Encupsulation.swift in Sources */,
+				528716FE2B50FBAC00D768F6 /* Generics.swift in Sources */,
 				520C3F4C2B4FCB50003932DD /* main.swift in Sources */,
+				523AE5E02B50757900300F57 /* Protacol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
