@@ -1,24 +1,161 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="bmi_calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CALCULATE YOUR BMI" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SKP-9a-bzs">
+                                <rect key="frame" x="30" y="159" width="353" height="100.33333333333331"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SMu-pR-3rk">
+                                <rect key="frame" x="30" y="299.33333333333331" width="333" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="WYh-II-JbR">
+                                <rect key="frame" x="28" y="340.33333333333331" width="337" height="31"/>
+                                <connections>
+                                    <action selector="heightChanche:" destination="BYZ-38-t0r" eventType="valueChanged" id="QoB-ot-X5Z"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o00-gU-a39">
+                                <rect key="frame" x="30" y="390.33333333333331" width="333" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="1En-41-a1o">
+                                <rect key="frame" x="28" y="431.33333333333331" width="337" height="31"/>
+                                <connections>
+                                    <action selector="weightChanche:" destination="BYZ-38-t0r" eventType="valueChanged" id="Nbn-ve-mPL"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="op8-2g-2AP">
+                                <rect key="frame" x="30" y="661.33333333333337" width="333" height="35"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Calculate" titleAlignment="center">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="calculateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AOE-cq-yhs"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1.5m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bvK-MX-awc">
+                                <rect key="frame" x="285" y="299" width="72" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="70kg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iSk-CK-N9E">
+                                <rect key="frame" x="285" y="390" width="74" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="op8-2g-2AP" secondAttribute="trailing" constant="30" id="H0i-FB-Fj8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1En-41-a1o" secondAttribute="trailing" constant="30" id="I4v-KY-kuv"/>
+                            <constraint firstItem="1En-41-a1o" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Ixq-ls-BkW"/>
+                            <constraint firstItem="o00-gU-a39" firstAttribute="top" secondItem="WYh-II-JbR" secondAttribute="bottom" constant="20" id="JMZ-Hh-4f5"/>
+                            <constraint firstItem="WYh-II-JbR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="K9G-Vt-lK3"/>
+                            <constraint firstItem="op8-2g-2AP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="KsL-12-5H8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o00-gU-a39" secondAttribute="trailing" constant="30" id="LJQ-pg-eod"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SMu-pR-3rk" secondAttribute="trailing" constant="30" id="SA8-wn-2c4"/>
+                            <constraint firstItem="SMu-pR-3rk" firstAttribute="top" secondItem="SKP-9a-bzs" secondAttribute="bottom" constant="40" id="Sx3-gl-KiP"/>
+                            <constraint firstItem="SMu-pR-3rk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="SzY-vd-DLx"/>
+                            <constraint firstItem="1En-41-a1o" firstAttribute="top" secondItem="o00-gU-a39" secondAttribute="bottom" constant="20" id="XPp-x4-i7r"/>
+                            <constraint firstItem="SKP-9a-bzs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="YCU-jI-32z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SKP-9a-bzs" secondAttribute="trailing" constant="10" id="bHp-gR-O87"/>
+                            <constraint firstItem="SKP-9a-bzs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="eSc-XD-TBo"/>
+                            <constraint firstItem="WYh-II-JbR" firstAttribute="top" secondItem="SMu-pR-3rk" secondAttribute="bottom" constant="20" id="fBp-LR-clO"/>
+                            <constraint firstItem="o00-gU-a39" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="gw0-hF-TVM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WYh-II-JbR" secondAttribute="trailing" constant="30" id="hJL-Kb-DWO"/>
+                            <constraint firstItem="op8-2g-2AP" firstAttribute="top" secondItem="1En-41-a1o" secondAttribute="bottom" constant="200" id="qNA-VP-iQ3"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="heightLabel" destination="bvK-MX-awc" id="rAh-oy-YGj"/>
+                        <outlet property="weightLabel" destination="iSk-CK-N9E" id="AdL-Wj-DyB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="135.1145038167939" y="3.5211267605633805"/>
+        </scene>
+        <!--Success View Controller-->
+        <scene sceneID="Zy5-MF-kYM">
+            <objects>
+                <viewController storyboardIdentifier="successView" id="2WZ-Tu-pR7" customClass="SuccessViewController" customModule="bmi_calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sQD-f4-OgD">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m4Q-ar-JaU">
+                                <rect key="frame" x="30" y="359" width="333" height="34.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gmB-Ws-o0K">
+                                <rect key="frame" x="30" y="670.33333333333337" width="333" height="47.666666666666629"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Close">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="closeAction:" destination="2WZ-Tu-pR7" eventType="touchUpInside" id="kfT-Hy-IgN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mLS-zv-0Kt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gmB-Ws-o0K" firstAttribute="leading" secondItem="mLS-zv-0Kt" secondAttribute="leading" constant="30" id="Dne-Il-thF"/>
+                            <constraint firstItem="mLS-zv-0Kt" firstAttribute="trailing" secondItem="m4Q-ar-JaU" secondAttribute="trailing" constant="30" id="Gcg-Ow-Vwx"/>
+                            <constraint firstItem="m4Q-ar-JaU" firstAttribute="leading" secondItem="mLS-zv-0Kt" secondAttribute="leading" constant="30" id="Lot-Ts-jRu"/>
+                            <constraint firstItem="mLS-zv-0Kt" firstAttribute="bottom" secondItem="gmB-Ws-o0K" secondAttribute="bottom" constant="100" id="SFP-R5-reN"/>
+                            <constraint firstItem="m4Q-ar-JaU" firstAttribute="top" secondItem="mLS-zv-0Kt" secondAttribute="top" constant="300" id="iQS-re-3Ym"/>
+                            <constraint firstItem="mLS-zv-0Kt" firstAttribute="trailing" secondItem="gmB-Ws-o0K" secondAttribute="trailing" constant="30" id="xA0-wq-FbX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="m4Q-ar-JaU" id="QIW-Ka-MNR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QuA-Ca-D4F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="913" y="18"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
