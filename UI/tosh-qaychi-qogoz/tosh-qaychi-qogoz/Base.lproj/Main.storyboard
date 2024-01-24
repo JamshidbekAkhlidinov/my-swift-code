@@ -44,16 +44,14 @@
                                     <action selector="paperClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lgz-9v-39Z"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hisob:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kN0-0C-EsI">
-                                <rect key="frame" x="60" y="112" width="80" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hisob:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kN0-0C-EsI">
+                                <rect key="frame" x="20" y="112" width="80" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dastur: 0; Siz: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyC-JN-tqX">
-                                <rect key="frame" x="59" y="155" width="196" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dastur: 0; Siz: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyC-JN-tqX">
+                                <rect key="frame" x="20" y="155" width="353" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -75,6 +73,13 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kN0-0C-EsI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="O0Y-WI-PwZ"/>
+                            <constraint firstItem="kN0-0C-EsI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="53" id="OH9-8C-JNc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cyC-JN-tqX" secondAttribute="trailing" constant="20" id="OWh-dm-8Ze"/>
+                            <constraint firstItem="cyC-JN-tqX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="dfZ-0T-elT"/>
+                            <constraint firstItem="cyC-JN-tqX" firstAttribute="top" secondItem="kN0-0C-EsI" secondAttribute="bottom" constant="8" symbolic="YES" id="iOm-Lc-NVt"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="paperButton" destination="uUR-Sg-yD7" id="PCu-x0-ZB5"/>
