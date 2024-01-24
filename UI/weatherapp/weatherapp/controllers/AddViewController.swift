@@ -9,13 +9,27 @@ import UIKit
 
 class AddViewController: UIViewController {
 
+    @IBOutlet weak var cityNameInput: UITextField!
+    private let networkingManager = NetworkingManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func saveCityName(_ sender: UIButton) {
+        
+        guard let cityName = cityNameInput.text, !cityName.isEmpty else {
+            return
+        }
+        
+        networkingManager.getWeatherData(cityName) { data in
+            print(data ?? "test")
+        }
+        
+    }
+    
     /*
     // MARK: - Navigation
 
