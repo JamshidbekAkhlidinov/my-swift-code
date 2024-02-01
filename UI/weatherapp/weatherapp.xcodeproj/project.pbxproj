@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		522296112B6B6E630052082A /* WeatherListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522296102B6B6E630052082A /* WeatherListTableViewCell.swift */; };
 		5252C5F72B61773700EC941D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5252C5F62B61773700EC941D /* AppDelegate.swift */; };
 		5252C5F92B61773700EC941D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5252C5F82B61773700EC941D /* SceneDelegate.swift */; };
 		5252C5FB2B61773700EC941D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5252C5FA2B61773700EC941D /* ViewController.swift */; };
@@ -18,9 +19,11 @@
 		5252C6102B617CC700EC941D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5252C60F2B617CC700EC941D /* SettingsViewController.swift */; };
 		5252C6142B61800300EC941D /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5252C6132B61800300EC941D /* WeatherData.swift */; };
 		5252C6162B61803600EC941D /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5252C6152B61803600EC941D /* NetworkingManager.swift */; };
+		52DE91922B6B387F00AFBA92 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DE91912B6B387F00AFBA92 /* WebService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		522296102B6B6E630052082A /* WeatherListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherListTableViewCell.swift; sourceTree = "<group>"; };
 		5252C5F32B61773700EC941D /* weatherapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weatherapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5252C5F62B61773700EC941D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5252C5F82B61773700EC941D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +37,7 @@
 		5252C60F2B617CC700EC941D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		5252C6132B61800300EC941D /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		5252C6152B61803600EC941D /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+		52DE91912B6B387F00AFBA92 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5222960F2B6B6E2E0052082A /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				522296102B6B6E630052082A /* WeatherListTableViewCell.swift */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
 		5252C5EA2B61773700EC941D = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +94,7 @@
 		5252C60A2B617C2100EC941D /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5222960F2B6B6E2E0052082A /* cell */,
 				5252C5FA2B61773700EC941D /* ViewController.swift */,
 				5252C60B2B617C8600EC941D /* AddViewController.swift */,
 				5252C60D2B617CA400EC941D /* DetailViewController.swift */,
@@ -102,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				5252C6152B61803600EC941D /* NetworkingManager.swift */,
+				52DE91912B6B387F00AFBA92 /* WebService.swift */,
 			);
 			path = networking;
 			sourceTree = "<group>";
@@ -177,9 +191,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52DE91922B6B387F00AFBA92 /* WebService.swift in Sources */,
 				5252C5FB2B61773700EC941D /* ViewController.swift in Sources */,
 				5252C5F72B61773700EC941D /* AppDelegate.swift in Sources */,
 				5252C6142B61800300EC941D /* WeatherData.swift in Sources */,
+				522296112B6B6E630052082A /* WeatherListTableViewCell.swift in Sources */,
 				5252C60E2B617CA400EC941D /* DetailViewController.swift in Sources */,
 				5252C60C2B617C8600EC941D /* AddViewController.swift in Sources */,
 				5252C6162B61803600EC941D /* NetworkingManager.swift in Sources */,

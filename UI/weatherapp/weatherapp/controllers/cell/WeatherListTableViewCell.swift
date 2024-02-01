@@ -8,16 +8,18 @@
 import UIKit
 
 class WeatherListTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var cityNameLabel:UILabel!
+    @IBOutlet weak var tempuratureLabel:UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+  
+    func setData(data:WeatherData){
+        cityNameLabel.text = data.name
+        tempuratureLabel.text = "\(data.main?.temp ?? 0.0)"
     }
-
 }

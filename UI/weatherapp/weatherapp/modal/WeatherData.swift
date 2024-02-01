@@ -10,7 +10,7 @@ import Foundation
 struct WeatherData:Codable {
     let weather:[Weather]
     let base:String?
-    let main: Main
+    let main: Main?
     let name:String?
 }
 
