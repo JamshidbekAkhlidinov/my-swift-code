@@ -27,10 +27,11 @@ class AddViewController: UIViewController {
         
         let apiKey:String = "a421f18853f3f97ef6b102c067a39a4e"
         
-        guard let weatherUrl = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(cityName)&appid=\(apiKey)") else { return }
+        guard let weatherUrl = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(cityName)&appid=\(apiKey)") else {
+            return
+        }
         
-        
-        let weatherResource = Resource(url: weatherUrl) { data in
+        let weatherResource = Resource<WeatherData>(url: weatherUrl) { data in
             let decoderWeatherData = try? JSONDecoder().decode(WeatherData.self, from: data)
             return decoderWeatherData
         }
@@ -51,19 +52,7 @@ class AddViewController: UIViewController {
 //            }
 //            
 //        }
-        
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 protocol AddWeatherDelegate {

@@ -26,9 +26,9 @@ class ViewController: UIViewController, AddWeatherDelegate{
             
             guard let nav = segue.destination as? UINavigationController else { return }
                 
-            guard let addWeather = nav.viewControllers.first as? AddViewController else { return }
+            guard let addWeatherVC = nav.viewControllers.first as? AddViewController else { return }
             
-            addWeather.delegate = self
+            addWeatherVC.delegate = self
         }
     }
 
@@ -47,6 +47,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        tableView.register(WeatherListTableViewCell.self, forCellReuseIdentifier: "weatherCell")
+
         let cell = tableView.dequeueReusableCell(
             withIdentifier: "weatherCell",
             for:indexPath
@@ -56,7 +58,4 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
-    
-    
-    
 }

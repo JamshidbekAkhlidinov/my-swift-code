@@ -19,7 +19,7 @@ class WeatherListTableViewCell: UITableViewCell {
 
   
     func setData(data:WeatherData){
-        cityNameLabel.text = data.name
-        tempuratureLabel.text = "\(data.main?.temp ?? 0.0)"
+//        cityNameLabel.text = data.name
+//        tempuratureLabel.text = "\(data.main?.temp ?? 0.0)"
     }
 }
